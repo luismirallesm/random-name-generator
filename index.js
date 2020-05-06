@@ -11,9 +11,7 @@ let persona = {
 };
 
 app.get('/', function (req, res) {
-
-  // ejs render automatically looks in the views folder
-  res.render('index');
+ console.log('This is the home');
 });
 
 app.get('/mujer', function (req, res) {
@@ -33,7 +31,6 @@ app.get('/hombre', function (req, res) {
   };
   res.send(persona);
 });
-app.use(express.static(__dirname + '/public'));
 app.listen(port, function() {
   console.log('Our app is running on http://localhost:' + port);
 });
